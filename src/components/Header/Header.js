@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Container from "./styles.header"
 
 export default () => (
@@ -7,6 +8,9 @@ export default () => (
       <h1>Full Stack Developer</h1>
       <h2>Front End Focus</h2>
     </div>
-    <div className="right">Right</div>
+    <nav className="right">
+      <Link to="/about/">About</Link>
+      <Link to="/projects/">Projects</Link>
+    </nav>
   </Container>
 )
