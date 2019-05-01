@@ -12,3 +12,11 @@ export const font_weight = {
   light: 300,
   medium: 500,
 }
+
+export const font_color = {
+  superdarkgray: `#333333`,
+  darkgray: `#888888`,
+  gray: `#b4b4b4`,
+  lightgray: `#f1f1f1`,
+  extralightgray: `#f8f8f8`,
+}

@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `babel-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

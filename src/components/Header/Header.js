@@ -9,8 +9,9 @@ export default () => (
       <h2>Front End Focus</h2>
     </div>
     <nav className="right">
-      <Link to="/about/">About</Link>
       <Link to="/projects/">Projects</Link>
+      <Link to="/skills">Technologies</Link>
+      <Link to="/about/">About</Link>
     </nav>
   </Container>
 )
