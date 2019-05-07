@@ -32,11 +32,12 @@ export default () => (
           Hi there!
           <br />
           <br />
-          Thank you for visiting my website. I'm a building architect/project
-          coordinator turned web developer. I am passionate about the
-          intersection of technology and design and I strive to turn great ideas
-          into reality. I love solving programmatic challenges and I have strong
-          attention to user experience and layout.
+          Thank you for visiting my website. I'm a front-end focus full stack
+          developer with previous background in architecture and project
+          management. I am passionate about the intersection of technology and
+          design and I strive to turn great ideas into reality. I love solving
+          programmatic challenges and I have strong attention to user experience
+          and layout.
           <br />
           <br />
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -68,7 +69,7 @@ export default () => (
       </div>
       <img
         src="https://res.cloudinary.com/webedward/image/upload/v1557194532/portfolio-website/silphoto2.png"
-        alt="Edward's Photo"
+        alt="Edward's"
       />
     </div>
   </Container>

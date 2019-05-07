@@ -1,42 +1,29 @@
 import styled from "styled-components"
-import { font_size, color, font_weight } from "../shared/styles.guide"
-import { flexCenter, playfairFont } from "../shared/styles.global"
-
-const width = 50
+import { /* font_size, */ color, font_weight } from "../shared/styles.guide"
+import * as animations from "../shared/styles.animations"
+import {
+  flexCenter,
+  playfairFont,
+  pagePadding,
+  contentWrapper,
+  contentWidth,
+  titleStyles,
+} from "../shared/styles.global"
 
 export default styled.div`
   ${flexCenter("column")}
-  padding: 3rem 2rem;
-
-  .title {
-    text-align: center;
-    width: 100%;
-    border-bottom: 1px solid ${color.gray};
-    max-width: ${width + "rem"};
-    padding-bottom: 1rem;
-
-    h1 {
-      ${playfairFont}
-      font-weight: normal;
-
-      span {
-        color: ${color.theme};
-      }
-    }
-  }
+  ${pagePadding}
+  ${titleStyles};
 
   .about-me {
-    width: ${width};
-    ${flexCenter()}
-    flex-wrap: wrap;
-    margin-top: 4rem;
+    ${contentWrapper}
     div {
       p {
         margin: 0 2rem 1rem 0;
         font-weight: ${font_weight.lighter};
         letter-spacing: 0.5px;
         line-height: 1.5;
-        width: ${width / 1.9 + "rem"};
+        width: ${contentWidth / 1.9 + "rem"};
       }
       .socials {
         margin: 0 0.25rem;
@@ -47,7 +34,7 @@ export default styled.div`
 
           :hover {
             fill: ${color.light_theme};
-            /* fill: url(#a); */
+            ${animations.scale(`.2s`, `1.15`)}
           }
         }
       }
@@ -55,7 +42,24 @@ export default styled.div`
 
     img {
       align-self: flex-start;
-      width: ${width / 2.5 + "rem"};
+      width: ${contentWidth / 2.5 + "rem"};
+    }
+  }
+
+  @media (max-width: 420px) {
+    .about-me {
+      div {
+        p {
+          width: auto;
+          /* text-align: center; */
+          margin: 0 0 1rem 0;
+        }
+      }
+
+      img {
+        margin-top: 1.5rem;
+        width: 90%;
+      }
     }
   }
 `

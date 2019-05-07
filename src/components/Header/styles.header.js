@@ -2,10 +2,17 @@ import styled from "styled-components"
 import { font_size, color, font_weight } from "../shared/styles.guide"
 
 export default styled.header`
+position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: ${color.extralightgray};
+  background: white;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  -webkit-box-shadow: 0px 1px 4px 1px ${color.lightgray};
+  -moz-box-shadow: 0px 1px 4px 1px ${color.lightgray};
+  box-shadow: 0px 1px 4px 1px ${color.lightgray};
 
   .brand {
     color: ${color.superdarkgray};
@@ -26,12 +33,12 @@ export default styled.header`
       justify-content: center;
       margin-left: 1rem;
 
-      h2 {
+      .top {
         font-weight: ${font_weight.light};
         margin: 0px;
       }
 
-      h3 {
+      .bot {
         font-weight: ${font_weight.lighter};
         margin: 0px;
       }
@@ -45,17 +52,47 @@ export default styled.header`
     margin-right: 1rem;
     text-align: right;
 
-    a {
+    .nav_links {
       text-decoration: none;
       color: ${color.darkgray};
-      margin: 0 1rem;
-      font-size: ${font_size.t3};
+      padding: 0 1rem;
+      font-size: ${font_size.t4};
       font-weight: ${font_weight.light};
 
       :hover {
         color: ${color.superdarkgray};
         text-decoration: underline;
         font-weight: ${font_weight.medium};
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    div {
+      .top {
+        font-size: ${font_size.t2};
+      }
+      .bot {
+        font-size: ${font_size.t3};
+      }
+    }
+
+    nav {
+      margin-right: 0;
+      a {
+        font-size: ${font_size.t_help};
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    div {
+      .top {
+        font-size: ${font_size.t2};
+        /* font-weight: ${font_weight.medium} !important; */
+      }
+      .bot {
+        display: none;
       }
     }
   }
