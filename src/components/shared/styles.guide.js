@@ -13,10 +13,16 @@ export const font_weight = {
   medium: 500,
 }
 
-export const font_color = {
+export const color = {
   superdarkgray: `#333333`,
   darkgray: `#888888`,
   gray: `#b4b4b4`,
   lightgray: `#f1f1f1`,
-  extralightgray: `#f8f8f8`,
+  extralightgray: `#f9f9f9`,
+
+  theme: `#fc202f`,
+  light_theme: `#fd545f`,
+
+  lovelyblue: `#2694e0`,
+  navyblue: `#143c58`,
 }

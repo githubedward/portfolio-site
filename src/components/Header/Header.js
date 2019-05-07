@@ -4,14 +4,17 @@ import Container from "./styles.header"
 
 export default () => (
   <Container>
-    <div className="left">
-      <h1>Full Stack Developer</h1>
-      <h2>Front End Focus</h2>
+    <div className="brand">
+      <h1 className="elogo">Ed</h1>
+      <div>
+        <h2>Full Stack Developer</h2>
+        <h3>Front End Focus</h3>
+      </div>
     </div>
-    <nav className="right">
-      <Link to="/projects/">Projects</Link>
-      <Link to="/skills">Technologies</Link>
-      <Link to="/about/">About</Link>
+    <nav>
+      <Link to="/">About</Link>
+      <Link to="/tech/">Technologies</Link>
+      <Link to="/projects/">+Projects</Link>
     </nav>
   </Container>
 )
