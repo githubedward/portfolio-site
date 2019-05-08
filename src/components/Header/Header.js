@@ -31,11 +31,11 @@ export default class Header extends Component {
           <Link className="nav_links" to="/">
             About
           </Link>
-          <Link className="nav_links" to="/tech/">
+          <Link className="nav_links" to="/tech">
             Technologies
           </Link>
           <Link
-            to="/projects/"
+            to="/projects"
             className="nav_links"
             onMouseOver={this.toggleProjectTab}
           >

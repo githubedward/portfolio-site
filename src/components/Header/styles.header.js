@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { font_size, color, font_weight } from "../shared/styles.guide"
 
 export default styled.header`
-position: relative;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +10,7 @@ position: relative;
   width: 100%;
   position: fixed;
   top: 0px;
+  z-index: 2;
   -webkit-box-shadow: 0px 1px 4px 1px ${color.lightgray};
   -moz-box-shadow: 0px 1px 4px 1px ${color.lightgray};
   box-shadow: 0px 1px 4px 1px ${color.lightgray};
@@ -89,7 +90,6 @@ position: relative;
     div {
       .top {
         font-size: ${font_size.t2};
-        /* font-weight: ${font_weight.medium} !important; */
       }
       .bot {
         display: none;

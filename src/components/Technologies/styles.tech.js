@@ -3,12 +3,10 @@ import {
   flexCenter,
   pagePadding,
   contentWrapper,
-  playfairFont,
-  contentWidth,
   titleStyles,
 } from "../shared/styles.global"
 import * as animations from "../shared/styles.animations"
-import { color } from "../shared/styles.guide"
+// import { color } from "../shared/styles.guide"
 
 export default styled.div`
   ${flexCenter("column")};
@@ -19,6 +17,7 @@ export default styled.div`
     ${contentWrapper};
 
     .icon_wrapper {
+      outline: none;
       :hover {
         ${animations.scale(`.2s`, `1.15`)}
       }
@@ -26,7 +25,6 @@ export default styled.div`
         color: white !important;
       }
       .icon {
-        outline: none;
         height: 5rem;
         margin: 1rem 2rem;
       }

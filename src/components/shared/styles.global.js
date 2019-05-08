@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from "styled-components"
-import { color, font_weight } from "./styles.guide"
+import { color } from "./styles.guide"
 
 export default createGlobalStyle`
   * {
@@ -15,6 +15,7 @@ export default createGlobalStyle`
 
   a {
     cursor: pointer;
+    text-decoration: none;
   }
 
   ul {

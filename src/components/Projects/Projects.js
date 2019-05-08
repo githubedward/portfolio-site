@@ -1,5 +1,6 @@
 import React from "react"
 import Container from "./styles.projects"
+import { Link } from "gatsby"
 
 const projectList = [
   {
@@ -10,35 +11,38 @@ const projectList = [
   {
     name: "MapSocial",
     url:
-      "https://res.cloudinary.com/webedward/image/upload/v1557260361/portfolio-website/pinit/pinit-iso.jpg",
+      "https://res.cloudinary.com/webedward/image/upload/v1557283348/portfolio-website/mapsocial/iso-2.png",
   },
   {
     name: "BrainFlix",
     url:
-      "https://res.cloudinary.com/webedward/image/upload/v1557260361/portfolio-website/pinit/pinit-iso.jpg",
-  },
-  {
-    name: "BrainFlix Mobile",
-    url:
-      "https://res.cloudinary.com/webedward/image/upload/v1557260361/portfolio-website/pinit/pinit-iso.jpg",
+      "https://res.cloudinary.com/webedward/image/upload/v1557283571/portfolio-website/brainFlix/iso2.png",
   },
   {
     name: "Band Site",
     url:
-      "https://res.cloudinary.com/webedward/image/upload/v1557260361/portfolio-website/pinit/pinit-iso.jpg",
+      "https://res.cloudinary.com/webedward/image/upload/v1557284437/portfolio-website/bandsite/iso.png",
+  },
+  {
+    name: "BrainFlix Mobile",
+    url:
+      "https://res.cloudinary.com/webedward/image/upload/v1557284305/portfolio-website/brainFlix/iso4.png",
   },
   {
     name: "Band Site Mobile",
     url:
-      "https://res.cloudinary.com/webedward/image/upload/v1557260361/portfolio-website/pinit/pinit-iso.jpg",
+      "https://res.cloudinary.com/webedward/image/upload/v1557285149/portfolio-website/bandsite/iso2.png",
   },
 ]
 
 const ProjectCard = ({ name, url }) => (
-  <li className="project_card">
+  <Link
+    className="project_card"
+    to={`/${name.replace(/\s+/g, "-").toLowerCase()}`}
+  >
     <img src={url} alt={`${name}`} />
-    {name}
-  </li>
+    <div className="proj_name">{name}</div>
+  </Link>
 )
 
 export default () => (
@@ -46,10 +50,10 @@ export default () => (
     <div className="title">
       <h1>Projects</h1>
     </div>
-    <ul className="wrapper">
+    <div className="wrapper">
       {projectList.map((project, id) => (
         <ProjectCard key={id} name={project.name} url={project.url} />
       ))}
-    </ul>
+    </div>
   </Container>
 )

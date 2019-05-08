@@ -1,9 +1,8 @@
 import styled from "styled-components"
-import { /* font_size, */ color, font_weight } from "../shared/styles.guide"
+import { color, font_weight } from "../shared/styles.guide"
 import * as animations from "../shared/styles.animations"
 import {
   flexCenter,
-  playfairFont,
   pagePadding,
   contentWrapper,
   contentWidth,
