@@ -23,23 +23,24 @@ export default styled.div`
       height: 17.5rem;
       background-color: white;
       margin: 1rem 1rem;
-      -webkit-box-shadow: 0px 2px 4px 1px ${color.gray};
-      -moz-box-shadow: 0px 2px 4px 1px ${color.gray};
-      box-shadow: 0px 2px 4px 1px ${color.gray};
-      border-radius: 5px;
+      -webkit-box-shadow: 5px 5px 10px 1px ${color.lightgray};
+      -moz-box-shadow: 5px 5px 10px 1px ${color.lightgray};
+      box-shadow: 5px 5px 10px 1px ${color.lightgray};
+      /* border-radius: 5px; */
       cursor: pointer;
       text-decoration: none;
+      /* border-bottom: 2px solid ${color.lightgray};
+      border-right: 2px solid ${color.lightgray}; */
 
       img {
-        /* padding: 1rem 0; */
         width: 100%;
         height: 100%;
-        border-radius: 5px;
+        /* border-radius: 5px; */
         -o-object-fit: cover;
         object-fit: cover;
         -o-object-position: center;
         object-position: center;
-        opacity: 0.5;
+        opacity: 0.4;
       }
 
       .proj_name {
@@ -56,9 +57,9 @@ export default styled.div`
 
       :hover {
         ${animations.scale(`.25s`, `1.05`)};
-        -webkit-box-shadow: 0px 2px 4px 1px ${color.darkgray};
-        -moz-box-shadow: 0px 2px 4px 1px ${color.darkgray};
-        box-shadow: 0px 2px 4px 1px ${color.darkgray};
+        -webkit-box-shadow: 5px 5px 10px 1px ${color.gray};
+        -moz-box-shadow: 5px 5px 10px 1px ${color.gray};
+        box-shadow: 5px 5px 10px 1px ${color.gray};
         opacity: 1;
 
         .proj_name {
@@ -68,6 +69,15 @@ export default styled.div`
         img {
           opacity: 1;
         }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .wrapper {
+      .project_card {
+        width: 100%;
+        height: 60vh;
       }
     }
   }

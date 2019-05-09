@@ -30,4 +30,14 @@ export default styled.div`
       }
     }
   }
+
+  @media (max-width: 500px) {
+    .icons_container {
+      .icon_wrapper {
+        .icon {
+          height: 4rem;
+        }
+      }
+    }
+  }
 `

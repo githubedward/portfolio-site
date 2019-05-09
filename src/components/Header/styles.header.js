@@ -11,9 +11,9 @@ export default styled.header`
   position: fixed;
   top: 0px;
   z-index: 2;
-  -webkit-box-shadow: 0px 1px 4px 1px ${color.lightgray};
-  -moz-box-shadow: 0px 1px 4px 1px ${color.lightgray};
-  box-shadow: 0px 1px 4px 1px ${color.lightgray};
+  -webkit-box-shadow: 0px 5px 10px 5px white;
+  -moz-box-shadow: 0px 5px 10px 5px white;
+  box-shadow: 0px 5px 10px 5px white;
 
   .brand {
     color: ${color.superdarkgray};
@@ -49,7 +49,6 @@ export default styled.header`
   nav {
     color: blue;
     display: flex;
-    flex-direction: column;
     margin-right: 1rem;
     text-align: right;
 
@@ -68,7 +67,7 @@ export default styled.header`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     div {
       .top {
         font-size: ${font_size.t2};
@@ -79,6 +78,7 @@ export default styled.header`
     }
 
     nav {
+      flex-direction: column;
       margin-right: 0;
       a {
         font-size: ${font_size.t_help};

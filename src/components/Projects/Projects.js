@@ -38,7 +38,7 @@ const projectList = [
 const ProjectCard = ({ name, url }) => (
   <Link
     className="project_card"
-    to={`/${name.replace(/\s+/g, "-").toLowerCase()}`}
+    to={`/projects/${name.replace(/\s+/g, "-").toLowerCase()}`}
   >
     <img src={url} alt={`${name}`} />
     <div className="proj_name">{name}</div>
